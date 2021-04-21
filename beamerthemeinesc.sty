@@ -1,0 +1,35 @@
+\DeclareOptionBeamer{width}
+{\PassOptionsToPackage{width=#1}{beamerouterthemecustom}}
+
+%\DeclareOptionBeamer{hideothersubsections}
+%{\PassOptionsToPackage{hideothersubsections=#1}{beamerouterthemesidebar}}
+%
+%\DeclareOptionBeamer{hideallsubsections}
+%{\PassOptionsToPackage{hideallsubsections=#1}{beamerouterthemesidebar}}
+
+\ProcessOptionsBeamer
+
+
+\mode<presentation>
+
+\useoutertheme{custom}
+
+\usecolortheme{inesc}
+%\setbeamercolor*{titlelike}{parent=structure}
+
+\useinnertheme{default}
+%\setbeamertemplate{frametitle}[default][right]
+
+%\usefonttheme{serif}
+\usefonttheme{structurebold}
+
+% hide navigation bar
+%\setbeamertemplate{navigation symbols}{}
+
+%\makeatletter
+\logo{\includegraphics[width=.85\beamer@sidebarwidth,height=.85\beamer@headheight,keepaspectratio]{logo_inesc_branco.pdf}}  % <<<<<<< change logo (branco)
+%\logo{\includegraphics[width=.85\beamer@sidebarwidth,height=.85\beamer@headheight,keepaspectratio]{logo_inesc_azul.pdf}}  % <<<<<<< change logo (azul)
+%\makeatother
+
+\mode
+<all>

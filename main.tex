@@ -1,0 +1,93 @@
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+
+%% Language and font encodings 
+\usepackage[english]{babel} 
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+
+%% Useful packages 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{inconsolata}	% alternative to monospaced font
+\usepackage{pdfpages}
+
+% Setup presentaiton
+\mode<presentation>
+\usetheme{inesc}
+\newcommand{\email}[1]{\scriptsize\texttt{\texorpdfstring{\href{mailto:#1}{#1}}{#1}}}
+
+\title[Short Title]{Presentation Title}
+\subtitle{Subtitle}
+\keywords{keywords}	% for the PDF file
+
+\author[Author Short Name]{Author Long Name
+\texorpdfstring{\\}{ }
+\email{email@example.com}}
+\institute[INESC-ID]{INESC-ID, Instituto Superior Técnico, Universidade de Lisboa, Portugal}
+\date[date or something else]{\today}
+
+%\titlegraphic{\includegraphics[height=0.3\textheight]{example-image}}
+\titlegraphic{
+    \begin{figure}
+         \centering
+         \begin{subfigure}[c]{0.3\textwidth}
+             \centering
+             \includegraphics[height=0.3\textheight]{example-image-a}
+         \end{subfigure}%
+         \begin{subfigure}[c]{0.3\textwidth}
+             \centering
+             \includegraphics[height=0.3\textheight]{example-image-b}
+         \end{subfigure}
+     \end{figure}
+ }
+
+\setbeamertemplate{navigation symbols}{}	% disable the navigation symbols of beamer in bottom right corner
+
+\begin{document}
+	\maketitle
+	
+	\section{Section 1}
+	
+		\subsection{Subsection 1}
+			\begin{frame}{Section 1 or Frame Title}{Subsection 1 or Subtitle}
+				\begin{columns}
+					\column{0.5\textwidth}
+					Some text in 1st column.
+					\column{0.5\textwidth}
+					And 2nd column.
+				\end{columns}
+			\end{frame}
+		
+		\subsection{Subsection 2}
+			\begin{frame}{Section 1 or Frame Title}{Subsection 2 or Another Subtitle}
+				Content 1.2
+			\end{frame}
+	
+		
+	\section{Section 2}
+	
+		\begin{frame}{Section 2}
+			\begin{itemize}
+				\item item 1
+				\item item 2
+				\item item 3
+			\end{itemize}
+			\begin{enumerate}
+				\item item 1
+				\item item 2
+				\item item 3
+			\end{enumerate}
+		\end{frame}
+		
+    {
+        \setbeamercolor{background canvas}{bg=}
+        \includepdf[pages=-]{thank_you.pdf}
+    }
+    
+\end{document}
